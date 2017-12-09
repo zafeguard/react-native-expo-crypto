@@ -1,5 +1,7 @@
 # react-native-crypto
 
+THIS REPOSITORY HAS MOVED. IT'S NEW LOCATION IS HERE: [https://github.com/tradle/react-native-crypto](https://github.com/tradle/react-native-crypto)
+
 Note: this module is a clone of [crypto-browserify](https://github.com/crypto-browserify/crypto-browserify), with randombytes replaced. When React Native begins to [support](https://github.com/facebook/react-native) the "react-native" keyword in package.json, this module may go away
 
 A port of node's `crypto` module to React Native.
