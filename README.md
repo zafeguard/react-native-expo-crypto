@@ -1,43 +1,25 @@
-# react-native-crypto
+# react-native-expo-crypto
 
-THIS REPOSITORY HAS MOVED. IT'S NEW LOCATION IS HERE: [https://github.com/tradle/react-native-crypto](https://github.com/tradle/react-native-crypto)
+THIS REPOSITORY HAS MOVED. IT'S NEW LOCATION IS HERE: [https://github.com/themotu/react-native-expocrypto](https://github.com/tradle/react-native-expo-crypto)
 
-Note: this module is a clone of [crypto-browserify](https://github.com/crypto-browserify/crypto-browserify), with randombytes replaced. When React Native begins to [support](https://github.com/facebook/react-native) the "react-native" keyword in package.json, this module may go away
+Note: this module is a clone of [crypto-browserify](https://github.com/crypto-browserify/crypto-browserify), with randombytes replaced. 
 
 A port of node's `crypto` module to React Native.
 
 ## install
 
-Because this module depends on some node core modules, and react-native doesn't currently have a [resolve.alias a la webpack](https://productpains.com/post/react-native/packager-support-resolvealias-ala-webpack), you will need to use [rn-nodeify](https://github.com/mvayngrib/rn-nodeify) for your shimming needs.
-
 A typical workflow:
 
 1. Install
   ```sh
-  npm i --save react-native-crypto
-  # install peer deps
-  npm i --save react-native-randombytes
-  react-native link react-native-randombytes
-  # install latest rn-nodeify
-  npm i --save-dev mvayngrib/rn-nodeify
-  # install node core shims and recursively hack package.json files
-  # in ./node_modules to add/update the "browser"/"react-native" field with relevant mappings
-  ./node_modules/.bin/rn-nodeify --hack --install
-  ```
-
-2. `rn-nodeify` will create a `shim.js` in the project root directory
-  ```js
-  // index.ios.js or index.android.js
-  // make sure you use `import` and not require!  
-  import './shim.js'
-  // ...the rest of your code
+  expo add expo-random && yarn add react-native-expo-crypto react-native-expo-bitcoinjs-lib
   ```
 
 ## the crypto in this box
 
 What follows is unedited text from crypto-browserify
 
-The goal of this module is to reimplement node's crypto module so that it can run in react-native supported environments.
+The goal of this module is to use expo-random for randombytes.
 
 Here is the subset that is currently implemented:
 
