@@ -1,6 +1,8 @@
 'use strict'
 
-import {getRandomBytes as randomBytes} from 'expo-random';
+import {getRandomBytes as randomBytesArray} from 'expo-random';
+import toBuffer from 'typedarray-to-buffer';
+const randomBytes = toBuffer(randomBytesArray)
 exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = randomBytes
 
 // implement window.getRandomValues(), for packages that rely on it
