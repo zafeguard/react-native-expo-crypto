@@ -1,9 +1,9 @@
 'use strict'
 
-import {getRandomBytes as randomBytesArray} from 'expo-random';
-import toBuffer from 'typedarray-to-buffer';
+import { getRandomBytes as randomBytesArray } from 'expo-crypto'
+import toBuffer from 'typedarray-to-buffer'
 
-function randomBytes(bytes) {
+function randomBytes (bytes) {
   return toBuffer(randomBytesArray(bytes))
 }
 
@@ -15,7 +15,7 @@ if (typeof window === 'object') {
   if (!window.crypto.getRandomValues) {
     window.crypto.getRandomValues = function getRandomValues (arr) {
       let orig = arr
-      if (arr.byteLength != arr.length) {
+      if (arr.byteLength !== arr.length) {
         // Get access to the underlying raw bytes
         arr = new Uint8Array(arr.buffer)
       }
