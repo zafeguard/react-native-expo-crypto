@@ -10,7 +10,7 @@ A typical workflow:
 
 1. Install
   ```sh
-  expo add expo-random && yarn add @zafeguard/react-native-expo-crypto
+  expo add expo-crypto && yarn add @zafeguard/react-native-expo-crypto
   ```
 
 ## the crypto in this box
