@@ -1,7 +1,5 @@
 # react-native-expo-crypto
 
-THIS REPOSITORY HAS MOVED. IT'S NEW LOCATION IS HERE: [https://github.com/themotu/react-native-expocrypto](https://github.com/tradle/react-native-expo-crypto)
-
 Note: this module is a clone of [crypto-browserify](https://github.com/crypto-browserify/crypto-browserify), with randombytes replaced. 
 
 A port of node's `crypto` module to React Native.
@@ -12,7 +10,7 @@ A typical workflow:
 
 1. Install
   ```sh
-  expo add expo-random && yarn add react-native-expo-crypto react-native-expo-bitcoinjs-lib
+  expo add expo-random && yarn add @zafeguard/react-native-expo-crypto
   ```
 
 ## the crypto in this box
